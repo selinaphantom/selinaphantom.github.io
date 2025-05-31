@@ -1,0 +1,54 @@
+.animated-lines {
+  position: fixed;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  background-size: 200% 200%;
+  opacity: 0.15;
+}
+
+
+.left-lines {
+  left: 0;
+  background: repeating-linear-gradient(
+    135deg,
+    #00ccff 0px,
+    #00ccff 2px,
+    transparent 2px,
+    transparent 10px,
+    #ff66cc 10px,
+    #ff66cc 12px,
+    transparent 12px,
+    transparent 20px
+  );
+  animation: moveLeftLines 25s linear infinite;
+}
+
+
+.right-lines {
+  right: 0;
+  background: repeating-linear-gradient(
+    225deg,
+    #00ccff 0px,
+    #00ccff 2px,
+    transparent 2px,
+    transparent 10px,
+    #ff66cc 10px,
+    #ff66cc 12px,
+    transparent 12px,
+    transparent 20px
+  );
+  animation: moveRightLines 25s linear infinite;
+}
+
+@keyframes moveLeftLines {
+  0% { background-position: 0 0; }
+  100% { background-position: 200px 200px; }
+}
+
+@keyframes moveRightLines {
+  0% { background-position: 0 0; }
+  100% { background-position: -200px 200px; }
+}
